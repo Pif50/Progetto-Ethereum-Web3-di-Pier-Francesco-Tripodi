@@ -13,7 +13,7 @@ headers = {
 }
 
 
-def main():
+def upload_to_pinata(filepath):
     with Path(filepath).open("rb") as fp:
         image_binary = fp.read()
         response = requests.post(

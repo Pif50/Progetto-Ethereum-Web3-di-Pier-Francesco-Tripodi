@@ -1,8 +1,10 @@
 from brownie import HogwartsHouses, network
 from scripts.helpful_scripts import get_raffle
+from scripts.upload_to_pinata import upload_to_pinata
 from metadata.metadata_template import metadata_template
 from pathlib import Path
 import requests
+import json
 
 
 def main():
@@ -25,7 +27,10 @@ def main():
             ] = f"You will be part of the household of {raffle}"
             image_path = "./img/" + raffle.lower().replace("_", "-") + ".png"
             image_uri = upload_to_ipfs(image_path)
-            # collectible_metadata["image"]
+            collectible_metadata["image"] = image_uri
+            with open(metadata_file_name, "w") as file:
+                json.dump(collectible_metadata, file)
+            upload_to_ipfs(metadata_file_name)
 
 
 def upload_to_ipfs(filepath):
