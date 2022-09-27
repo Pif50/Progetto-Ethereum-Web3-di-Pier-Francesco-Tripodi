@@ -1,7 +1,7 @@
 metadata_template = {
     "name": "",
     "description": "",
-    "imagine": "",
+    "image": "",
     "attributes": [
         {
             "Ability": "Levitation, Lycanthropy, Maledictus, Magical Resistance, Parseltongue, Apparition"

@@ -2,6 +2,7 @@ from brownie import HogwartsHouses, network
 from scripts.helpful_scripts import get_raffle
 from metadata.metadata_template import metadata_template
 from pathlib import Path
+import requests
 
 
 def main():
@@ -30,3 +31,6 @@ def main():
 def upload_to_ipfs(filepath):
     with Path(filepath).open("rb") as fp:
         image_binary = fp.read()
+        ipfs_url = "http://127.0.0.1:5001"
+        endpoint = "api/v0/add"
+        response = requests.post(ipfs_url + endpoint, files="file":image_binary)
