@@ -3,6 +3,11 @@ from web3 import Web3
 
 LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["hardhat", "development", "ganache", "mainnet-fork"]
 OPENSEA_URL = "https://testnets.opensea.io/assets/{}/{}"
+RAFFLE_MAPPING = {0: "GRYFFINDOR", 1: "HUFFLEPUFF", 2: "RAVENCLAW", 3: "SLYTHERIN"}
+
+
+def get_raffle(raffle_number):
+    return RAFFLE_MAPPING[raffle_number]
 
 
 def get_account(index=None, id=None):
