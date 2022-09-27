@@ -37,10 +37,7 @@ contract HogwartsHouses is ERC721URIStorage, VRFConsumerBase {
         fee = _fee;
     }
 
-    function createCollectible(string memory tokenURI)
-        public
-        returns (bytes32)
-    {
+    function createCollectible() public returns (bytes32) {
         //We want the user who called createCollectoible to be the same user
         //who gets assigned the tokenId
         bytes32 requestId = requestRandomness(keyhash, fee); //This is going to create our randomness request to get random Houses of Howarts.
