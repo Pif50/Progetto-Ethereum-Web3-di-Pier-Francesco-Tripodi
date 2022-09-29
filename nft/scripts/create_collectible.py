@@ -7,12 +7,12 @@ def main():
     account = get_account()
 
     # Most recent deployed
-    advanced_collectible = HogwartsHouses[-1]
+    hogwarts_houses = HogwartsHouses[-1]
 
     # Fund the contract
-    fund_with_link(advanced_collectible.address, amount=Web3.toWei(0.1, "ether"))
+    fund_with_link(hogwarts_houses.address, amount=Web3.toWei(0.1, "ether"))
 
     # Transaction
-    creation_transaction = advanced_collectible.createCollectible({"from": account})
+    creation_transaction = hogwarts_houses.createCollectible({"from": account})
     creation_transaction.wait(1)  # Wait one block confermation
     print("Collectible created!")
