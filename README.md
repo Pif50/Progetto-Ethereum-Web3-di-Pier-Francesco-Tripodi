@@ -56,11 +56,11 @@ dotenv: .env
 
 # How to deploy Smart contract and able to see the nft on [Opensea Testnet](https://testnets.opensea.io/)
 ```
-brownie run scripts/advanced_collectible/deploy_advanced.py --network rinkeby
-brownie run scripts/advanced_collectible/create_collectible.py --network rinkeby
+brownie run scripts/deploy_and_create.py --network goerli
+brownie run scripts/create_collectible.py --network goerli
 ```
 Then:
 ```
-brownie run scripts/advanced_collectible/create_metadata.py --network rinkeby
-brownie run scripts/advanced_collectible/set_tokenuri.py --network rinkeby
+brownie run scripts/create_metadata.py --network goerli
+brownie run scripts/set_token_uri.py --network goerli
 ```
