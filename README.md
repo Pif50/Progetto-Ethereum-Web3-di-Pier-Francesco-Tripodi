@@ -35,7 +35,7 @@ pipx install eth-brownie
 npm install -g ganache-cli
 ```
 
-3. Set your environment variables, if yu wanto deploy to testnets
+3. Set your environment variables, if you want deploy to testnets
 
 Set your `WEB3_INFURA_PROJECT_ID`, and `PRIVATE_KEY` [environment variables](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html). 
 
