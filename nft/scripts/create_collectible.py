@@ -16,3 +16,4 @@ def main():
     creation_transaction = hogwarts_houses.createCollectible({"from": account})
     creation_transaction.wait(1)  # Wait one block confermation
     print("Collectible created!")
+    return creation_transaction

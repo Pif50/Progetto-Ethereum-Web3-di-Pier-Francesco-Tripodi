@@ -1,5 +1,6 @@
 from brownie import accounts, network, config, LinkToken, VRFCoordinatorMock, Contract
 from web3 import Web3
+import os
 
 LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["hardhat", "development", "ganache", "mainnet-fork"]
 OPENSEA_URL = "https://testnets.opensea.io/assets/{}/{}"
@@ -76,3 +77,12 @@ def fund_with_link(
     funding_tx.wait(1)
     print(f"Funded {contract_address}")
     return funding_tx
+
+
+def get_publish_source():
+    if network.show_active() in LOCAL_BLOCKCHAIN_ENVIRONMENTS or not os.getenv(
+        "ETHERSCAN_TOKEN"
+    ):
+        return False
+    else:
+        return True

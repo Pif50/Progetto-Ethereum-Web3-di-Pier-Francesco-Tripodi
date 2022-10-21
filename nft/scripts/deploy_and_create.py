@@ -3,6 +3,7 @@ from scripts.helpful_scripts import (
     OPENSEA_URL,
     get_contract,
     fund_with_link,
+    get_publish_source
 )
 from brownie import HogwartsHouses, network, config
 
@@ -30,6 +31,7 @@ def deploy_and_create():
         config["networks"][network.show_active()]["keyhash"],
         config["networks"][network.show_active()]["fee"],
         {"from": account},
+        publish_source=("0xA4705dba5a7459Cee1AAc384aa971ff2d10e59D5")
     )
 
     # We fund the contract with link beacause we can call the randomNumber function from chainlink.
