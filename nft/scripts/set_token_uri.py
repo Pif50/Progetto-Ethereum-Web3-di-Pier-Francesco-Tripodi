@@ -2,10 +2,10 @@ from brownie import network, HogwartsHouses
 from scripts.helpful_scripts import OPENSEA_URL, get_account, get_raffle
 
 raffle_metadata_dic = {
-    "GRYFFINDOR": "https://ipfs.io/ipfs/QmXJcdftXeX9ndcmsPFijRNtyMM49yvSnb8AcveMKWq61c?filename=GRYFFINDOR.png",
-    "HUFFLEPUFF": "https://ipfs.io/ipfs/QmPererbdHNMFnXLtXbhRZWAADa9optg6Lx12ZJQc6uvgf?filename=hufflepuff.png",
-    "RAVENCLAW": "https://ipfs.io/ipfs/QmNWK2ZdMTosThWfSmU53PsWwhCebXq6jassyeU7M2uHq9?filename=ravenclaw.png",
-    "SLYTHERIN": "https://ipfs.io/ipfs/Qmc9xQwQCZHyx12muXp86YZrnfy2gpYQBopFA9HDqT91sL?filename=slytherin.png",
+    "GRYFFINDOR": "https://ipfs.io/ipfs/QmXJcdftXeX9ndcmsPFijRNtyMM49yvSnb8AcveMKWq61c?filename=GRYFFINDOR.json",
+    "HUFFLEPUFF": "https://ipfs.io/ipfs/QmPz1mxmqUGQUUuVNFWYUPU5BF6dU5MBCQ5xmG3c63pDMN?filename=HUFFLEPUFF.json",
+    "RAVENCLAW": "https://ipfs.io/ipfs/QmUH9J2eY2Cuu4m5raGCg2XmGqZrd6NuvTatzgwWX1Jm6z?filename=RAVENCLAW.json",
+    "SLYTHERIN": "https://ipfs.io/ipfs/QmPvjuj32AFV9yye7agrxSzty4Y5nCvesNkzgmYjJciA2f?filename=SLYTHERIN.json",
 }
 
 
