@@ -27,16 +27,10 @@ let raffle_to_image_uri = {
 };
 
 const connectButton = document.getElementById("connectButton");
-const createCollectibleButton = document.getElementById(
-  "createCollectibleButton"
-);
 const createMetadataButton = document.getElementById("createMetadataButton");
-const getImageButton = document.getElementById("getImageButton");
 
 connectButton.onclick = connect;
-createCollectibleButton.onclick = createCollectible;
 createMetadataButton.onclick = createMetadata;
-getImageButton.onclick = get_image;
 
 async function connect() {
   if (typeof window.ethereum !== "undefined") {
@@ -72,6 +66,11 @@ function listenForTransactionMine(transactionResponse, provider) {
       console.log(
         `Completed with ${transactionReceipt.confirmations} confirmations`
       );
+      {
+        alert(
+          `Completed with ${transactionReceipt.confirmations} confirmations`
+        );
+      }
       resolve();
     });
   });
@@ -83,8 +82,16 @@ async function createMetadata() {
     const signer = provider.getSigner();
     const contract = new ethers.Contract(contractAddress, abi, signer);
     try {
+      const transactionResponse = await contract.createCollectible({
+        gasLimit: 5000000,
+      });
+      await listenForTransactionMine(transactionResponse, provider);
+      {
+        alert(
+          "Your NFT has been created. The Sorting Hart is choosing your houses"
+        );
+      }
       const number_of_hogwarts_houses = await contract.tokenCounter();
-      console.log(`You have created ${number_of_hogwarts_houses} collectibles`);
       let token_id = 0;
       const raffle = getRaffle(contract.tokenIdToRaffle(token_id));
       console.log(raffle);
@@ -93,16 +100,9 @@ async function createMetadata() {
         contract,
         raffle_metadata_dic[raffle]
       );
-      console.log(settokenuri);
       const raffle_image = raffle_to_image_uri[raffle];
       console.log(raffle_image);
-      window.location = raffle_image;
-      // var token_id = 0;
-      // for (token_id = 0; token_id < number_of_hogwarts_houses; ) {
-      //   const raffle = getRaffle(contract.tokenIdToRaffle(token_id));
-
-      //   console.log(`Setting tokenURI of ${token_id}`);
-      //   //set_token_uri(token_id, contractAddress, raffle_metadata_dic[raffle]);
+      window.open = raffle_image;
     } catch (error) {
       console.log(error);
     }
@@ -118,28 +118,6 @@ async function set_token_uri(token_id, nft_contract, tokenURI) {
       const tx = await contract.setTokenURI(token_id, tokenURI);
       console.log(`We are seting token ${token_id} to uri`);
       await listenForTransactionMine(tx, provider);
-      `Awesome! You can view your NFT at ${OPENSEA_URL.format(
-        contractAddress,
-        token_id
-      )}`;
-    } catch (error) {
-      console.log(error);
-    }
-  }
-}
-
-async function get_image() {
-  if (typeof window.ethereum !== "undefined") {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = provider.getSigner();
-    const contract = new ethers.Contract(contractAddress, abi, signer);
-    try {
-      let token_id = 0;
-      const raffle = getRaffle(contract.tokenIdToRaffle(token_id));
-      console.log(raffle);
-      const raffle_image = raffle_to_image_uri[raffle];
-      console.log(raffle_image);
-      window.location = raffle_image;
     } catch (error) {
       console.log(error);
     }
