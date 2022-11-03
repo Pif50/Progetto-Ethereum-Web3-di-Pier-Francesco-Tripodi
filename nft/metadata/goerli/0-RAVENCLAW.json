@@ -1,0 +1,10 @@
+{
+  "name": "RAVENCLAW",
+  "description": "You will be part of the household of RAVENCLAW",
+  "image": "https://ipfs.io/ipfs/QmNWK2ZdMTosThWfSmU53PsWwhCebXq6jassyeU7M2uHq9?filename=RAVENCLAW.png",
+  "attributes": [
+    {
+      "Ability": "Levitation, Lycanthropy, Maledictus, Magical Resistance, Parseltongue, Apparition"
+    }
+  ]
+}

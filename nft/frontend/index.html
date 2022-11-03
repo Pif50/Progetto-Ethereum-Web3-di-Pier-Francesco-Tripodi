@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/master.css" type="text/css" />
     <title>Hogwarts Houses</title>
   </head>
-  <body>
-    waaaazuuuuupppp
+  <body class="sfondo">
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark fixed-top">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <p class="fs-4 testo">Hogwarts Houses</p>
+            <li class="nav-item">
+              <a
+                class="nav-link-danger btn2"
+                href="https://github.com/Pif50"
+                target="_blank"
+                ><img
+                  src="./assets/img/github-logo.png"
+                  alt=""
+                  width="36"
+                  height="20"
+                  class="d-inline-block align-text-top"
+              /></a>
+            </li>
+          </ul>
+          <ul>
+            <li class="nav-item">
+              <a
+                class="nav-link-danger active bottone"
+                aria-current="page"
+                id="connectButton"
+                src=""
+                >Connect!</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <button id="connectButton">Connect!</button>
-    <button id="createCollectibleButton">Create Collectible</button>
-    <button id="createMetadataButton" src="./index.js">Create Metadata</button>
-    <button id="createTokenUri" src="./index.js">Create Tokenk Uri</button>
+    <div class="text-center mybox bianco fs-5">
+      <p>
+        <br />
+        Hello and welcome to the Harry Potter Sorting Hat. <br />
+        Have you always dreamed of being selected by the Sorting Hat? <br />
+        This is the right place for you! <br />
+        Click on the button below and you will automatically get an NFT of your
+        Hogwarts houses!
+        <br /><button
+          class="nav-link-danger active bottoneMint"
+          id="createCollectibleButton"
+        >
+          Create Collectible
+        </button>
+      </p>
+    </div>
 
     <script src="./index.js" type="module"></script>
   </body>

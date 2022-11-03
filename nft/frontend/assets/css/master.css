@@ -1,0 +1,117 @@
+.sfondo {
+  background: url(/nft/frontend/assets/img/sort-hat.jpeg) no-repeat center
+    center fixed;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.centrato {
+  padding-top: 100px;
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.testo {
+  margin-top: 30px;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.testoHome {
+  margin-top: auto;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.grigio {
+  background-color: #ff000000;
+}
+
+.bianco {
+  color: white;
+}
+
+.mybox {
+  border: 10px solid #ff000000;
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding-bottom: 70px;
+  padding-top: 10px;
+}
+
+/* Animazione bottoni */
+.bottone {
+  background-color: #fff;
+  border: solid #333;
+  border-radius: 6px;
+  color: rgb(255, 0, 0);
+  display: block;
+  font-family: sans-serif;
+  margin: 10px auto;
+  max-width: 100px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+
+  transition: all 0.6s;
+}
+
+.bottone:hover {
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+}
+
+.bottoneMint {
+  background-color: #fff;
+  border: solid #333;
+  border-radius: 6px;
+  color: rgb(255, 0, 0);
+  display: block;
+  font-family: sans-serif;
+  margin: 10px auto;
+  max-width: 1000px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+
+  transition: all 0.6s;
+}
+
+.bottoneMint:hover {
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+}
+.btn2 {
+  background-color: #fff;
+  border: solid #333;
+  border-radius: 6px;
+  color: #333;
+  display: block;
+  font-family: sans-serif;
+  margin: 10px auto;
+  max-width: 100px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.6s;
+  margin-left: 10px;
+}
+
+.btn2:hover {
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+}

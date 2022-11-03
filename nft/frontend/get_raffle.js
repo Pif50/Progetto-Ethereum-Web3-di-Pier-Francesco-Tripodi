@@ -1,9 +1,6 @@
 //colours to assiged(depending on random number)
 function getHouses(typeHouses = 0) {
-  return (
-    ["GRYFFINDOR", "HUFFLEPUFF", "RAVENCLAW", "SLYTHERIN"][typeHouses] ||
-    "GRYFFINDOR"
-  );
+  return ["GRYFFINDOR", "HUFFLEPUFF", "RAVENCLAW", "SLYTHERIN"][typeHouses];
 }
 
 //var with random generated
