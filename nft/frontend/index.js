@@ -41,23 +41,6 @@ async function connect() {
   }
 }
 
-async function createCollectible() {
-  if (typeof window.ethereum !== "undefined") {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = provider.getSigner();
-    const contract = new ethers.Contract(contractAddress, abi, signer);
-    try {
-      const transactionResponse = await contract.createCollectible({
-        gasLimit: 5000000,
-      });
-      await listenForTransactionMine(transactionResponse, provider);
-      console.log("Collectible created!!!");
-    } catch (error) {
-      console.log(error);
-    }
-  }
-}
-
 function listenForTransactionMine(transactionResponse, provider) {
   console.log(`Mining ${transactionResponse.hash}....`);
   //return new Promise()
