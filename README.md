@@ -54,7 +54,8 @@ Then, make sure your `brownie-config.yaml` has:
 dotenv: .env
 ```
 
-# How to deploy Smart contract and able to see the nft on [Opensea Testnet](https://testnets.opensea.io/)
+# How to deploy and iteract the Smart Contract from Back-end
+
 ```
 brownie run scripts/deploy_and_create.py --network goerli
 brownie run scripts/create_collectible.py --network goerli
@@ -62,5 +63,9 @@ brownie run scripts/create_collectible.py --network goerli
 Then:
 ```
 brownie run scripts/create_metadata.py --network goerli
-brownie run scripts/set_token_uri.py --network goerli
+brownie run scripts/set_tokenuri.py --network goerli
 ```
+
+# If you want to interact with UI
+
+Go to the folder called `frontend` and go to the file `index.html` and start the UI
