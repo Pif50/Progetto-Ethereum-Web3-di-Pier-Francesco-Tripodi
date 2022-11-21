@@ -1,7 +1,7 @@
 # Progetto-Ethereum-Web3-di-Pier-Francesco-Tripodi
 
 
-A NFT Contrat will mint one of four Houses of Hogwarts.
+An NFT Contract will mint one of the four Houses of Hogwarts.
 This smart contract is develop whit web3.py on Goerli Testnet.
 
 ### Notes for use:
